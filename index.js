@@ -375,15 +375,15 @@ function getHTML(data){
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
 function randomize(arr){
-  let randomNumber = Math.floor(Math.random()* arr.length);
-  let randomizedArray = [];
+  const randomizedArray = arr.slice();
   for(let i = 0; i < arr.length; i++){
-    if 
+    const randomNumber = Math.floor(Math.random() * i);
+    [randomizedArray[i], randomizedArray[randomNumber]] = [randomizedArray[randomNumber], randomizedArray[i]];
   }
-
-    /* Code here */
-
-  }
+  console.log(randomizedArray);
+  return randomizedArray;
+}
+randomize(artists);
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
