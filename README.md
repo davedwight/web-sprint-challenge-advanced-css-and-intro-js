@@ -22,10 +22,21 @@ Commit your code regularly and meaningfully.
 
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
-1. How would you describe acessibility on the web to someone new to programming?
+1. How would you describe accessibility on the web to someone new to programming?
+
+    Accessibility is a design process used in web development that focuses on making the web accessible to those with a variety of disabilities. Some of the most common disabilities to design for are visual impairment (for which the developer would ensure that his site or application is compatible with screen readers, that he is using semantic HTML, that he is adding visual indicators in addition to color changes, and that she is using ARIA roles where appropriate) and hearing impairment (for which the developer would provide visual cues such as closed captioning to any auditory elements in the application). A positive externality of design accessibility is that it increases the utility of an application for *all* users, not just those with disabilities. For example, filling out the alt attribute in an img tag not only enables a screen reader to describe images to those with visual impairment, but also allows for those with poor internet connection to better interpret the content of a site even if the images will not load. Another example is closed captioning on videos may aid those with normally abled hearing abilities to watch a video in a noisy environment. 
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+    You can descriptively fill out the alt attributes in img tags so that screen readers can read an image. You can use semantic HTML so that screen readers can effectively navigate through a page to read out the content in an organized fashion, and you can make font-size adjustable by using rems. 
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+    A variable acts as a container for storing data. Variables are especially helpful when you may want to reuse data throughout an application because they make it possible to not have to repeat the data, but rather simply reuse the variable name, which is good practice for DRY programming. Variables can contain data of all types (string, number, boolean, array, object, etc), and since Javascript is a loosely typed language, variables can be declared with data of one type and then get reassigned to values of any other type.
+
 4. What is the purpose of using functions in code?
+
+    Functions organize operations in an application within separate blocks of code. Functions are particularly useful when you might want to perform the same operation multiple times throughout an application, but using different input data. Instead of re-writing the code, you can use a function that takes in an input and puts out an output. Functions also allow you to protect a block of code. For example, a function allows you to choose when to run the code inside the function by invoking the function ( functionName() ). If you do not invoke the function, the code inside the function will not run.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
