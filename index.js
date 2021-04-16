@@ -389,19 +389,30 @@ function randomize(arr){
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- // using this code as a model to get started
-//  function get20s(arr){
-//   let twentiesArtists = [];
-//   for(let i = 0; i < arr.length; i++){
-//     if(Number(arr[i].years.split(" - ")[0]) >= 1900 && Number(arr[i].years.split(" - ")[1] < 2000)){
-//       twentiesArtists.push(arr[i].name)
-//     }
-//   }
-//   console.log(twentiesArtists);
-//   return twentiesArtists;
-// }
-// get20s(artists);
- 
+ function getYearsArray(arr) {
+  let yearsArray = [];
+  for(let i = 0; i < arr.length; i++){
+    let numberStringYears = arr[i].years.split(" - ");
+    let numberBirthYear = Number(numberStringYears[0]);
+    let numberDeathYear = Number(numberStringYears[1]);
+    let numberYears = [numberBirthYear, numberDeathYear];
+    let nameAndYears = [arr[i].name, numberYears];
+    yearsArray.push(nameAndYears);
+  }
+  // console.log(yearsArray);
+  return yearsArray;
+} 
+let yearsArray = getYearsArray(artists);
+
+function getTwentiesFilter(arr){
+  const result = arr.filter(function(item){
+    return item[1][0] >= 1900 && item[1][1] < 2000;
+  });
+  console.log(result);
+}
+getTwentiesFilter(yearsArray);
+
+
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
  function foo(){
